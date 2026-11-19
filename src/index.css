@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+
+  --color-ivory: #F8F7F3;
+  --color-ivory-warm: #F3F0E8;
+  --color-charcoal: #303532;
+  --color-sage: #788C7A;
+  --color-sage-deep: #4E6150;
+  --color-sage-soft: #E9EEE9;
+  --color-beige: #EAE5DC;
+  --color-paper: #FFFFFF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px;
+    background-color: #F8F7F3;
+    color: #303532;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  body {
+    background-color: #F8F7F3;
+    color: #303532;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: #EAE5DC;
+    color: #303532;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
